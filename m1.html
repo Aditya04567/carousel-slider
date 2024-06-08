@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Best Selling Europe Tour Packages</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    .bannerBottom {
+        min-width: 100vw;
+        min-height: 325px;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        margin-bottom: -3px;
+        z-index: 2;
+        bottom: 0;
+        box-sizing: border-box;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .bannerBottom::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 70%;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%);
+        z-index: -1;
+    }
+
+    .BannerSubHeading span {
+        background-color: #FFBA0A;
+        padding: 0 5px;
+        border-radius: 5px;
+        color: black;
+        margin-left: 10px;
+    }
+
+    .th-lead-form-widget-wrapper, div, input, span {
+        box-sizing: border-box !important;
+    }
+
+    .BannerMainHeading {
+        display: inline-block;
+        color: #fff;
+        font-size: 42px;
+        font-weight: 600;
+        line-height: 50px;
+    }
+
+    .BannerSubHeading {
+        display: flex;
+        align-items: center;
+        color: #fff;
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 33px;
+        margin-top: 17px;
+        padding-right: 15px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .divider {
+        display: flex;
+        align-items: center;
+        margin: 15px 0;
+        min-height: 1px;
+        width: 100%;
+        background: linear-gradient(270deg, hsla(0, 0%, 100%, .05) -.13%, hsla(0, 0%, 88%, .05) 0, #fff 49.17%, hsla(0, 0%, 88%, .05));
+    }
+
+    .pricewrapperBox {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding-right: 15px;
+    }
+
+    .Button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 15px;
+        width: 184px;
+        height: 51px;
+        border-radius: 40px;
+        background: var(--primary-color, #f37002);
+        color: #fff;
+        font-size: 14px;
+        font-weight: 500;
+        cursor: pointer;
+        text-transform: capitalize;
+    }
+
+    .Pricelabel {
+        display: flex;
+        align-items: center;
+        color: #e0e0e0;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 20px;
+    }
+
+    .priceWrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    .actualPrice {
+        display: flex;
+        align-items: center;
+        color: #fff;
+        font-size: 25px;
+        font-weight: 700;
+        line-height: 33px;
+        margin: 0 5px 0 10px;
+    }
+
+    .StrikeThroughprice {
+        display: flex;
+        align-items: center;
+        color: #e0e0e0;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 33px;
+        margin-right: 15px;
+        text-decoration-line: line-through;
+    }
+
+    .SaleOfferTag {
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        min-height: 22px;
+        max-height: 22px;
+        border-radius: 30px;
+        background: linear-gradient(93deg,#ff7b26,#ec048c);
+        padding: 2.5px 10px;
+        position: relative;
+    }
+
+    .SaleOfferTag_saleColor__9_PVC {
+        background: linear-gradient(93deg, #ff7b26, #ec048c);
+    }
+
+    .PriceOfferText {
+        display: flex;
+        align-items: center;
+        color: #fff;
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    .nextImageBox {
+        position: relative;
+        width: 100%;
+        height: auto;
+        box-shadow: inset 0 -100px 80px -50px rgba(0, 0, 0, 0.8);
+    }
+
+    .nextImageBox img {
+        max-width: 100%;
+        height: 100vh !important;
+    }
+
+    .carousel-control-prev {
+        left: 0;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        top: 50%;
+        background-color: rgba(0, 0, 0, .5);
+        border: 1px solid #e0e0e0;
+        margin-left: 40px;
+    }
+
+    .carousel-control-next {
+        right: 0;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        top: 50%;
+        background-color: rgba(0, 0, 0, .5);
+        border: 1px solid #e0e0e0;
+        margin-right: 40px;
+    }
+
+    @media (max-width: 768px) {
+        .BannerMainHeading {
+            font-size: 28px;
+            line-height: 34px;
+        }
+
+        .BannerSubHeading {
+            font-size: 18px;
+            line-height: 24px;
+            width: 100%;
+            padding-right: 0;
+        }
+
+        .divider {
+            width: 90%;
+        }
+
+        .Pricelabel {
+            font-size: 16px;
+        }
+
+        .actualPrice {
+            font-size: 20px;
+        }
+
+        .StrikeThroughprice {
+            font-size: 16px;
+        }
+
+        .Button {
+            width: 150px;
+            height: 40px;
+            font-size: 12px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .BannerMainHeading {
+            font-size: 22px;
+            line-height: 28px;
+            text-align: left;
+            margin-left: 20px;
+        }
+
+        .BannerSubHeading {
+            font-size: 16px;
+            line-height: 20px;
+            width: 100%;
+            padding-right: 0;
+            justify-content: left;
+            margin-left: 40px;
+            
+        }
+
+        .divider {
+            width: 80%;
+        }
+
+        .Pricelabel {
+            font-size: 14px;
+            
+        }
+
+        .actualPrice {
+            font-size: 18px;
+        }
+
+        .StrikeThroughprice {
+            font-size: 14px;
+        }
+
+        .Button {
+            width: 90%;
+            height: 40px;
+            font-size: 15px;
+            border-radius: 10px;
+        }
+
+        .bannerBottom {
+            min-height: 250px;
+        }
+       
+    }
+  </style>
+</head>
+<body>
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="nextImageBox">
+          <img src="https://media1.thrillophilia.com/filestore/98bghfjmes7jd8kwac2zhxwbnu2k_577760832-shutterstock_1241421160.jpg?w=1366&amp;dpr=1" class="d-block w-100" alt="Best Selling Europe Tour Packages" class="d-block w-100" alt="...">
+          <div class="bannerBottom">
+            <div class="BannerMainHeading">Best Selling Uzbekistan Tour Package</div>
+            <div class="BannerSubHeading">
+              <div>Get Upto <span>20% Off</span></div>
+            </div>
+            <div class="divider"></div>
+            <div class="pricewrapperBox">
+              <div class="priceWrapper">
+                <div class="Pricelabel">Starting at</div>
+                <div class="actualPrice">$999</div>
+                <div class="StrikeThroughprice">$1249</div>
+                <div class="SaleOfferTag">
+                  <div class="PriceOfferText">Summer Sale</div>
+                </div>
+              </div>
+            </div>
+            <div class="Button">Request callback</div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="nextImageBox">
+          <img src="https://media1.thrillophilia.com/filestore/cu3vgkkpxycmcjsoraiv188bqtu2_577760540-shutterstock_1024092049.jpg?w=1366&amp;dpr=1" class="d-block w-100" alt="Best Selling Europe Tour Packages" class="d-block w-100" alt="...">
+          <div class="bannerBottom">
+            <div class="BannerMainHeading">Best Selling Uzbekistan Tour Package</div>
+            <div class="BannerSubHeading">
+              <div>Get Upto <span>15% Off</span></div>
+            </div>
+            <div class="divider"></div>
+            <div class="pricewrapperBox">
+              <div class="priceWrapper">
+                <div class="Pricelabel">Starting at</div>
+                <div class="actualPrice">$799</div>
+                <div class="StrikeThroughprice">$949</div>
+                <div class="SaleOfferTag">
+                  <div class="PriceOfferText">Summer Sale</div>
+                </div>
+              </div>
+            </div>
+            <div class="Button">Request callback</div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="nextImageBox">
+          <img src="https://media1.thrillophilia.com/filestore/48dlpksw7qfg1ubx2km357g2lbej_577761131-shutterstock_2017823672.jpg?w=1366&amp;dpr=1" class="d-block w-100" alt="Best Selling Europe Tour Packages" class="d-block w-100" alt="...">
+          <div class="bannerBottom">
+            <div class="BannerMainHeading">Best Selling Uzbekistan Tour Package</div>
+            <div class="BannerSubHeading">
+              <div>Get Upto <span>10% Off</span></div>
+            </div>
+            <div class="divider"></div>
+            <div class="pricewrapperBox">
+              <div class="priceWrapper">
+                <div class="Pricelabel">Starting at</div>
+                <div class="actualPrice">$1199</div>
+                <div class="StrikeThroughprice">$1349</div>
+                <div class="SaleOfferTag">
+                  <div class="PriceOfferText">Summer Sale</div>
+                </div>
+              </div>
+            </div>
+            <div class="Button">Request callback</div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="nextImageBox">
+          <img src="https://media1.thrillophilia.com/filestore/b7xdjanpdujnow1zochz79u6140r_577760319-shutterstock_417402919.jpg?w=1366&amp;dpr=1" class="d-block w-100" alt="Best Selling Europe Tour Packages" class="d-block w-100" alt="...">
+          <div class="bannerBottom">
+            <div class="BannerMainHeading">Best Selling Uzbekistan Tour Package</div>
+            <div class="BannerSubHeading">
+              <div>Get Upto <span>25% Off</span></div>
+            </div>
+            <div class="divider"></div>
+            <div class="pricewrapperBox">
+              <div class="priceWrapper">
+                <div class="Pricelabel">Starting at</div>
+                <div class="actualPrice">$899</div>
+                <div class="StrikeThroughprice">$1199</div>
+                <div class="SaleOfferTag">
+                  <div class="PriceOfferText">Summer Sale</div>
+                </div>
+              </div>
+            </div>
+            <div class="Button">Request callback</div>
+          </div>
+        </div>
+      </div>  
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+</body>
+</html>
