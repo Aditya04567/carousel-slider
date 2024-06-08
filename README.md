@@ -4,7 +4,7 @@
 
 This project showcases a webpage for Best Selling Europe Tour Packages, highlighting various offers and discounts through a visually appealing carousel. The webpage is designed with HTML, CSS, and Bootstrap 4.5.2, ensuring a responsive and modern user experience. The carousel features multiple tour packages, each displaying key details such as pricing, discounts, and call-to-action buttons.
 
-![Uploading image.png…]()
+![image](https://github.com/Aditya04567/carousel-slider/assets/127686599/8687937f-edf2-4fa7-8489-18138a6b65c8)
 
 
 ## File Structure
